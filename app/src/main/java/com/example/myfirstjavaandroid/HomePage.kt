@@ -7,16 +7,15 @@ import android.provider.AlarmClock
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.myfirstjavaandroid.data.Datasource
 
 class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        var name = intent.extras?.getString("SS");
-        var tvHome = findViewById<TextView>(R.id.textView);
-        tvHome.text = name;
-
+        val textView: TextView = findViewById(R.id.textView)
+        textView.text = Datasource().loadAffirmations().size.toString()
     }
 
     fun onClickHandler(view: View) {

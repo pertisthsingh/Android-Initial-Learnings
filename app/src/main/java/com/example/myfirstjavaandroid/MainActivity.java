@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String name = getIntent().getExtras().getString("ps");
-        TextView mTextView = findViewById(R.id.tvMain);
+        TextView mTextView = findViewById(R.id.textView);
         mTextView.setText(name);
     }
 
